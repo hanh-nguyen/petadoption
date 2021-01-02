@@ -25,7 +25,7 @@ for color in ["Color" + str(i) for i in range(1, 4)]:
     print(count_color(df, color))
 
 
-""" Create a column to tell how many color a pet has
+""" TODO: Create a column to tell how many color a pet has
 Observation:
 6.1K pets have 2 colors
 4.5K pets have 1 color
@@ -51,7 +51,7 @@ df["ColorCombo"] = (
 )
 print(df["ColorCombo"].value_counts())
 
-""" Create a column for the color combination but order does not matter
+""" TODO: Create a column for the color combination but order does not matter
 Observation:
 Interestingly, ColorCombo and ColorCombo_unorder have exact results when running value_counts()
 Therefore, we will just use either one of them. We choose to use ColorCombo_unorder in case the new dataset does not have this characteristic
@@ -63,7 +63,7 @@ df["ColorCombo_unorder"] = df["ColorCombo_unorder"].apply(
     lambda x: "-".join([str(i) for i in x])
 )
 
-""" Create 7 columns for each color with yes as 1 or no as 0
+""" TODO: Create 7 columns for each color with yes as 1 or no as 0
 """
 for i in range(1, 8):
     new_col = "Color_" + str(i)
